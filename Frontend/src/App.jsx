@@ -7,6 +7,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 // import Cart from "./pages/Cart";
 import AdminDashboard from "./pages/AdminDashboard";
+import ProductsDashboard from "./components/ProductsDashboard";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
             <Route path="/signup" element={<Signup />} />
             {/* <Route path="/cart" element={<Cart />} /> */}
             <Route path="/admin-dashboard" element={<AdminDashboard />} />
+            <Route path="/products-dashboard" element={<ProductsDashboard />} />
           </Routes>
           <Footer />
         </Router>

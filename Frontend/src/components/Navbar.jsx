@@ -64,7 +64,7 @@ const Navbar = () => {
         {/* Navigation Links */}
         <div className="flex items-center gap-10">
           <Link
-            to="/products"
+            to="/products-dashboard"
             className="text-gray-700 hover:text-blue-500 transition font-semibold"
           >
             Products
