@@ -25,13 +25,13 @@ const Login = () => {
 
       if (response.data.message === "Login successful.") {
         let firstName = response.data.user.name.charAt(0).toUpperCase();
-        alert("login successful");
         if (response.data.user.isAdmin === true) {
           setIsAdminLoggedIn(true);
           setAdminName(firstName);
           localStorage.setItem("isAdminLoggedIn", true);
           localStorage.setItem("adminName", firstName);
           toast.success("Admin Login successful!");
+          alert("Admin Login successful!");
           navigate("/admin-dashboard");
         } else {
           setIsUserLoggedIn(true);
@@ -39,6 +39,7 @@ const Login = () => {
           localStorage.setItem("isUserLoggedIn", true);
           localStorage.setItem("userName", firstName);
           toast.success("User Login successful!");
+          alert("User Login successful!");
           navigate("/products-dashboard");
         }
       }

@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { addProduct, updateProduct } from "../services/productService";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { toast } from "react-toastify";
 
 const ProductForm = ({ selectedProduct, clearSelection, refreshList }) => {
@@ -24,13 +24,21 @@ const ProductForm = ({ selectedProduct, clearSelection, refreshList }) => {
     e.preventDefault();
     try {
       if (selectedProduct) {
-        await updateProduct(selectedProduct._id, product);
+        await axios.put(
+          `https://digital-clothing-server.vercel.app/products/${selectedProduct._id}`,
+          product,
+          { withCredentials: true }
+        );
         toast.success("Product updated successfully");
       } else {
-        await addProduct(product);
+        await axios.post(
+          "https://digital-clothing-server.vercel.app/products/add",
+          product,
+          { withCredentials: true }
+        );
         toast.success("Product added successfully");
       }
-    //   refreshList();
+      refreshList();
       clearSelection();
       setProduct({ name: "", description: "", price: "", image: "" });
     } catch (error) {
@@ -40,9 +48,14 @@ const ProductForm = ({ selectedProduct, clearSelection, refreshList }) => {
 
   return (
     <div>
-      <h2 className="text-2xl text-center font-bold">{selectedProduct ? "Edit Product" : "Add Product"}</h2>
-      <form onSubmit={handleSubmit} className="bg-gray-100 p-4 rounded shadow-md">
-        <input 
+      <h2 className="text-2xl text-center font-bold">
+        {selectedProduct ? "Edit Product" : "Add Product"}
+      </h2>
+      <form
+        onSubmit={handleSubmit}
+        className="bg-gray-100 p-4 rounded shadow-md"
+      >
+        <input
           type="text"
           name="name"
           value={product.name}
@@ -51,7 +64,7 @@ const ProductForm = ({ selectedProduct, clearSelection, refreshList }) => {
           className="w-full p-2 border rounded mb-2"
           required
         />
-        <input 
+        <input
           type="text"
           name="description"
           value={product.description}
@@ -60,7 +73,7 @@ const ProductForm = ({ selectedProduct, clearSelection, refreshList }) => {
           className="w-full p-2 border rounded mb-2"
           required
         />
-        <input 
+        <input
           type="number"
           name="price"
           value={product.price}
@@ -69,7 +82,7 @@ const ProductForm = ({ selectedProduct, clearSelection, refreshList }) => {
           className="w-full p-2 border rounded mb-2"
           required
         />
-        <input 
+        <input
           type="text"
           name="image"
           value={product.image}
@@ -81,7 +94,7 @@ const ProductForm = ({ selectedProduct, clearSelection, refreshList }) => {
           {selectedProduct ? "Update" : "Add"} Product
         </button>
         {selectedProduct && (
-          <button 
+          <button
             type="button"
             onClick={clearSelection}
             className="ml-2 bg-gray-400 text-white px-4 py-2 rounded"

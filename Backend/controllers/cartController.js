@@ -3,7 +3,7 @@ const Product = require("../models/productModel.js");
 
 const addToCart = async (req, res) => {
   try {
-    const { productId, quantity } = req.body;
+    const { productId } = req.body;
     const userId = req.user.id; 
 
     const product = await Product.findById(productId);
