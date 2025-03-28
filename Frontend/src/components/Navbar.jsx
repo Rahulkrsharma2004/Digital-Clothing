@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaShoppingCart, FaUserCircle } from "react-icons/fa";
 import { useContext, useState, useEffect } from "react";
 import AuthContext from "../context/AuthContext";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -13,8 +13,6 @@ const Navbar = () => {
     setIsAdminLoggedIn,
     setUserName,
     setAdminName,
-    userName,
-    adminName,
   } = useContext(AuthContext);
 
   const [isScrolled, setIsScrolled] = useState(false);
