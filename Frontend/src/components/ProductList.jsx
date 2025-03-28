@@ -46,7 +46,7 @@ const ProductList = ({ onEdit }) => {
             <tr key={product._id} className="border-b">
               <td className="p-3">{product.name}</td>
               <td className="p-3">{product.description}</td>
-              <td className="p-3">${product.price}</td>
+              <td className="p-3">Rs-{product.price}</td>
               <td className="p-3">
                 <button 
                   className="bg-yellow-500 text-white px-3 py-1 rounded mr-2"
