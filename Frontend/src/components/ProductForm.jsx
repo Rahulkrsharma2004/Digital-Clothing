@@ -29,6 +29,7 @@ const ProductForm = ({ selectedProduct, clearSelection, refreshList }) => {
           product,
           { withCredentials: true }
         );
+        alert("Product updated successfully!");
         toast.success("Product updated successfully");
       } else {
         await axios.post(
@@ -36,6 +37,7 @@ const ProductForm = ({ selectedProduct, clearSelection, refreshList }) => {
           product,
           { withCredentials: true }
         );
+        alert("Product added successfully!");
         toast.success("Product added successfully");
       }
       refreshList();

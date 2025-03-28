@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 import { FaShoppingCart } from 'react-icons/fa';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
-const ProductCard = ({ product, addToCart }) => {
+const ProductCard = ({ product }) => {
   const { name, description, price, image, customizationOptions } = product;
   const [isHovered, setIsHovered] = useState(false);
   const [selectedCustomization, setSelectedCustomization] = useState(
@@ -16,12 +17,19 @@ const ProductCard = ({ product, addToCart }) => {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleAddToCart = () => {
+  const handleAddToCart = async (id) => {
     const productWithCustomization = {
-      ...product,
+      productId: product.id,
       selectedCustomization,
     };
-    addToCart(productWithCustomization);
+
+    try {
+      const response = await axios.post(`https://digital-clothing-server.vercel.app/carts/add${id}`, productWithCustomization, {
+      withCredentials: true});
+      console.log('Cart updated:', response.data);
+    } catch (error) {
+      console.error('Error adding to cart:', error);
+    }
   };
 
   return (

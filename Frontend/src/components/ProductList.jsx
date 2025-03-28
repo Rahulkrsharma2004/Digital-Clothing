@@ -9,7 +9,7 @@ const ProductList = ({ onEdit }) => {
     fetchProducts();
   }, []);
 
-  const fetchProducts = async () => {
+  const fetchProducts = async ({refreshList}) => {
     try {
       const response = await axios.get(
         "https://digital-clothing-server.vercel.app/products",
@@ -24,10 +24,12 @@ const ProductList = ({ onEdit }) => {
   const handleDelete = async (id) => {
     try {
       await axios.delete(
-        `https://digital-clothing-server.vercel.app/products/${id}`,
+        `https://digital-clothing-server.vercel.app/products/delete${id}`,
         { withCredentials: true }
       );
+      alert('Product deleted successfully')
       toast.success("Product deleted successfully");
+      refreshList();
       fetchProducts();
     } catch (error) {
       toast.error("Error deleting product");
