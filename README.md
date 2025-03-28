@@ -4,15 +4,16 @@
 A highly interactive web application built with the **MERN (MongoDB, Express.js, React, Node.js)** stack. This app allows users to **browse, customize, and purchase** digital clothing with real-time customization features and virtual try-on functionality.
 
 ## 🖼 Demo
-![alt text](<Screenshot (177).png>)
-![alt text](<Screenshot (178).png>)
-![alt text](<Screenshot (179).png>)
-![alt text](<Screenshot (180).png>)
-![alt text](<Screenshot (181).png>)
-![alt text](<Screenshot (182).png>)
-![alt text](<Screenshot (183).png>)
-![alt text](<Screenshot (184).png>)
-![alt text](<Screenshot (185).png>)
+![Screenshot (177)](https://github.com/user-attachments/assets/777870e0-6c95-4c2c-8c47-5910ec4d2a42)
+![Screenshot (178)](https://github.com/user-attachments/assets/444b1223-5d57-4c74-a3e5-29c500130117)
+![Screenshot (179)](https://github.com/user-attachments/assets/8d0b593b-20f4-4fcb-98aa-27b4ec854cc9)
+![Screenshot (180)](https://github.com/user-attachments/assets/7daf149d-38cc-4036-a415-43f4e8d565ef)
+![Screenshot (181)](https://github.com/user-attachments/assets/39bb87ea-42da-46f5-87e2-58af38089f3c)
+![Screenshot (182)](https://github.com/user-attachments/assets/59450b52-3357-4421-acf0-bcea92c65b1a)
+![Screenshot (183)](https://github.com/user-attachments/assets/3e1ac130-1de9-4251-91d9-c249f508d0f1)
+![Screenshot (184)](https://github.com/user-attachments/assets/e9e6ef02-e3fe-445b-be7f-94aaa81f69f5)
+![Screenshot (185)](https://github.com/user-attachments/assets/9b77f154-debe-4a35-9d96-70e3b0a072da)
+
 
 ## 🚀 Tech Stack
 
