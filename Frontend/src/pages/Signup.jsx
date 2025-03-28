@@ -17,7 +17,7 @@ const Signup = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/users/register",
+        "https://digital-clothing-server.vercel.app/users/register",
         {
           name,
           email,

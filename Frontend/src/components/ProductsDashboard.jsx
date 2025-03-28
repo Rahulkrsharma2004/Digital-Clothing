@@ -10,7 +10,7 @@ const ProductsDashboard = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/products/');
+        const response = await axios.get('https://digital-clothing-server.vercel.app/products/');
         setProducts(response.data.products);
         setLoading(false);
         console.log(response.data.products);

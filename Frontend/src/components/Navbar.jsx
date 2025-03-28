@@ -52,16 +52,14 @@ const Navbar = () => {
       }`}
     >
       <div className="mx-auto px-16 flex items-center justify-between">
-        {/* Logo */}
         <Link to="/" className="flex items-center">
           <img
             src="https://res.cloudinary.com/zenbusiness/q_auto/v1/logaster/logaster-2019-02-t-digital-droom-logo-11.png"
             alt="Digital Clothing Logo"
-            className="w-30 h-14 object-contain" // Adjust size
+            className="w-30 h-14 object-contain" 
           />
         </Link>
 
-        {/* Navigation Links */}
         <div className="flex items-center gap-10">
           <Link
             to="/products-dashboard"
@@ -101,7 +99,6 @@ const Navbar = () => {
           )}
         </div>
 
-        {/* Profile Icon */}
         {(isUserLoggedIn || isAdminLoggedIn) && (
           <Link to="/profile" className="flex items-center space-x-2">
             <FaUserCircle className="text-3xl text-blue-500" />

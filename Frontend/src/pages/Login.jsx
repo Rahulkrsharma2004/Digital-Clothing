@@ -17,7 +17,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/users/login",
+        "https://digital-clothing-server.vercel.app/users/login",
         { email, password },
         { withCredentials: true }
       );

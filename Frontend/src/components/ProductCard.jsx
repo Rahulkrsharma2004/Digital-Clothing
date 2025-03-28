@@ -12,7 +12,6 @@ const ProductCard = ({ product, addToCart }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate data loading
     const timer = setTimeout(() => setLoading(false), 2000);
     return () => clearTimeout(timer);
   }, []);
@@ -31,7 +30,6 @@ const ProductCard = ({ product, addToCart }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Product Image */}
       <div className="relative">
         {loading ? (
           <Skeleton height={240} />
@@ -51,7 +49,6 @@ const ProductCard = ({ product, addToCart }) => {
         )}
       </div>
 
-      {/* Product Details */}
       <div className="p-4 flex flex-col items-center">
         {loading ? (
           <>
@@ -69,7 +66,6 @@ const ProductCard = ({ product, addToCart }) => {
           </>
         )}
 
-        {/* Customization Options */}
         {!loading && customizationOptions.length > 0 && (
           <div className="mt-3 w-full">
             <label htmlFor={`customization-${name}`} className="block text-sm font-medium text-gray-700">

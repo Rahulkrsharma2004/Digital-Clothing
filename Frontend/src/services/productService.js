@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/products";
+const API_URL = "https://digital-clothing-server.vercel.app/products";
 
 export const getProducts = async () => {
   const response = await axios.get(API_URL);
