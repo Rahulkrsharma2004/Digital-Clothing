@@ -4,14 +4,22 @@
 A highly interactive web application built with the **MERN (MongoDB, Express.js, React, Node.js)** stack. This app allows users to **browse, customize, and purchase** digital clothing with real-time customization features and virtual try-on functionality.
 
 ## 🖼 Demo
-![App Screenshot](https://via.placeholder.com/800x400)
+![alt text](<Screenshot (177).png>)
+![alt text](<Screenshot (178).png>)
+![alt text](<Screenshot (179).png>)
+![alt text](<Screenshot (180).png>)
+![alt text](<Screenshot (181).png>)
+![alt text](<Screenshot (182).png>)
+![alt text](<Screenshot (183).png>)
+![alt text](<Screenshot (184).png>)
+![alt text](<Screenshot (185).png>)
 
 ## 🚀 Tech Stack
 
 ### 🌐 Frontend:
 - ⚛️ React.js
-- 🔥 Redux / Context API
-- 🎨 Tailwind CSS / Material-UI / Styled Components
+- 🔥  Context API
+- 🎨 Tailwind CSS 
 - 🛤 React Router
 - 🎬 Framer Motion (for animations)
 
@@ -21,11 +29,11 @@ A highly interactive web application built with the **MERN (MongoDB, Express.js,
 - 🍃 MongoDB
 - 🏗 Mongoose
 - 🔐 JWT Authentication
-- 💳 Stripe / PayPal API (for payments)
+- 💳 Stripe (for payments)
 
 ### 🌍 Deployment:
-- 🖥 Frontend: Vercel / Netlify
-- ☁️ Backend: Heroku / Render
+- 🖥 Frontend: Vercel 
+- ☁️ Backend: Vercel
 - 🗄 Database: MongoDB Atlas
 
 ## ✨ Features
@@ -49,7 +57,7 @@ A highly interactive web application built with the **MERN (MongoDB, Express.js,
 ### 🛒 Shopping Cart & Checkout
 - 🛍 Add items to cart with **dynamic and animated UI**.
 - 🔄 Smooth transitions and persistent cart state.
-- 💰 Integrated **payment gateway (Stripe/PayPal sandbox)** for seamless checkout.
+- 💰 Integrated **payment gateway (Stripe)** for seamless checkout.
 
 ### 🎨 Frontend Development (React Focused)
 - 📱 Fully **responsive UI with modern design**.
@@ -64,20 +72,19 @@ A highly interactive web application built with the **MERN (MongoDB, Express.js,
 
 ### 📥 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/digital-clothing-app.git
-cd digital-clothing-app
+git clone https://github.com/Rahulkrsharma2004/Digital-Clothing.git
 ```
 
 ### 📦 2. Install dependencies:
 #### Frontend:
 ```bash
-cd frontend
+cd Frontend
 npm install
 ```
 
 #### Backend:
 ```bash
-cd backend
+cd Backend
 npm install
 ```
 
@@ -88,33 +95,33 @@ Create a `.env` file in both `frontend` and `backend` directories and add necess
 #### Start backend server:
 ```bash
 cd backend
-npm start
+npm run start
 ```
 
 #### Start frontend server:
 ```bash
 cd frontend
-npm start
+npm run dev
 ```
 
 ### 🌐 5. Open in Browser
-Visit `http://localhost:3000` to use the application.
+Visit `http://localhost:5173` to use the application.
 
 ## 📡 API Endpoints
 ### 🔐 Authentication
-- `POST /api/auth/register` - Register a new user
-- `POST /api/auth/login` - Login user
+- `POST /users/register` - Register a new user
+- `POST /users/login` - Login user
 
 ### 🛍 Products
-- `GET /api/products` - Fetch all products
-- `POST /api/products` - Add new product (Admin only)
-- `PUT /api/products/:id` - Update product (Admin only)
-- `DELETE /api/products/:id` - Delete product (Admin only)
+- `GET /products` - Fetch all products
+- `POST /products/add` - Add new product (Admin only)
+- `PUT /products/update/:id` - Update product (Admin only)
+- `DELETE /products/delete/:id` - Delete product (Admin only)
 
 ### 🛒 Cart
-- `POST /api/cart` - Add to cart
-- `GET /api/cart` - Get cart items
-- `DELETE /api/cart/:id` - Remove item from cart
+- `POST /carts` - Add to cart
+- `GET /carts` - Get cart items
+- `DELETE /carts/:id` - Remove item from cart
 
 ### 💳 Payments
 - `POST /api/payments/checkout` - Handle checkout process
@@ -126,14 +133,15 @@ npm run build
 vercel deploy
 ```
 
-### 📤 Backend Deployment (Heroku / Render)
+### 📤 Backend Deployment (vercel / Render)
 ```bash
-git push heroku main
+npm run build
+vercel deploy
 ```
 
 ## 📜 License
 This project is licensed under the **MIT License**.
 
 ## 👥 Contributors
-- [Your Name](https://github.com/your-username)
+- [Rahul Kumar](https://github.com/Rahulkrsharma2004)
 
