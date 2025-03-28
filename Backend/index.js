@@ -12,7 +12,7 @@ const app = express();
 app.use(cookieParser());
 app.use(express.json());
 
-app.use(cors({origin: ["http://localhost:5173","https://digital-clothing-server.vercel.app","https://digital-clothing-rks.vercel.app"],
+app.use(cors({origin: ["http://localhost:5173","https://digital-clothing-server.vercel.app","https://digital-clothing-server.vercel.app/products","https://digital-clothing-rks.vercel.app"],
     credentials: true,
   })
 );
